@@ -1,18 +1,17 @@
-import React from "react";
+import React  from "react";
+import './ExpenseItem.css'
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
   return (
-    <div>
-      <h2>Expense Item!</h2>
-      <h3>
-        Food Rs <span>10</span>
-      </h3>
-      <h3>
-        Petrol Rs <span>100</span>
-      </h3>
-      <h3>
-        Movies Rs <span>200</span>
-      </h3>
+   
+    <div className="expense-item">
+      
+      <div>{props.data.Date}</div>
+      <div className="expense-item__description">
+        <h2>{props.data.title}</h2>
+        <h2>{props.data.LocationOfExpenditure}</h2>
+        <div className="expense-item__price">{props.data.price}</div>
+      </div>
     </div>
   );
 };
